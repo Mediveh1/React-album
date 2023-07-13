@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link , useNavigate} from "react-router-dom";
 
 
-import Masonry from "react-responsive-masonry";
 
 function Album() {
   const navigate=useNavigate()
@@ -22,7 +21,7 @@ function Album() {
   return (
     <div>
       <h2 className="mt-3 mb-4 text-center">React Photo Album </h2>
-      <Masonry gutter="15px" spacing={{ spacing: "10px" }}>
+      <div>
         {pics.map((image) => (
           <div>
           
@@ -35,7 +34,7 @@ function Album() {
             /> 
           </div>
         ))}
-      </Masonry>
+      </div>
       <button type="button" onClick={() => setPages((prev) => prev + 1)}>
         Load more
       </button>
