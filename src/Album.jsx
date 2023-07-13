@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link , useNavigate} from "react-router-dom";
 
 
-import Masonry from "react-responsive-masonry";
-import Pic from "./Pic";
+import Masonry from "./react-responsive-masonry";
 
 function Album() {
   const navigate=useNavigate()
