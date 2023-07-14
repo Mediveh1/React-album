@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link , useNavigate} from "react-router-dom";
-
+import {  useNavigate} from "react-router-dom";
+import Masonry ,{ResponsiveMasonry}from "react-responsive-masonry";
+import "./index.css"
 
 
 function Album() {
@@ -21,10 +22,11 @@ function Album() {
   return (
     <div>
       <h2 className="mt-3 mb-4 text-center">React Photo Album </h2>
-      <div>
+      <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
+            >
+      <Masonry  columnsCount={3} gutter="6px">
         {pics.map((image) => (
           <div>
-          
             <img
               className="masonry-image"
               id={image.id}
@@ -34,10 +36,12 @@ function Album() {
             /> 
           </div>
         ))}
-      </div>
-      <button type="button" onClick={() => setPages((prev) => prev + 1)}>
+      </Masonry>
+      </ResponsiveMasonry>
+      <div className="more"><button type="button" className="load-more" onClick={() => setPages((prev) => prev + 1)}>
         Load more
-      </button>
+      </button></div>
+      
     </div>
   );
 }
