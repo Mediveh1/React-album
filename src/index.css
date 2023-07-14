@@ -45,6 +45,35 @@ button:active{
 .selected-image{
   width: 400px;
   height:500px;
-  margin-left: 550px;
+  margin-left: 740px;
+  margin-top: 50px;
  
+}
+
+.author{
+  position: absolute;
+  top: 220px;
+  left: 400px;
+  font-size: 35px;
+
+}
+.wrapper{
+  display: flex;
+  flex-direction: row;
+
+}
+
+hr{
+  position: relative;
+  right: 580px;
+  top: 120px;
+  height: 350px;
+  background: black;
+  border-top: 1px solid black;
+  width: 1px;
+
+  
+}
+body{
+  background-color: antiquewhite;
 }
